@@ -1,1 +1,22 @@
 <h1 style="color:blue">{{titulo}}</h1>
+
+
+<strong>Empleado</strong>
+<div *ngIf="trabajadorExterno == true">
+    <button>Mostrar empleado</button>
+    <ul >
+        <li>{{empleado.nombre}}</li>
+        <li>{{empleado.edad}}</li>
+        <li>{{empleado.cargo}}</li>
+        <li>{{empleado.contratado}}</li>
+    </ul>
+</div>
+<div *ngIf="trabajadorExterno == false">
+    <button>Mostrar trabajador</button>
+    <ul >
+        <li>{{trabajadores[2].nombre}}</li>
+        <li>{{trabajadores[2].edad}}</li>
+        <li>{{trabajadores[2].cargo}}</li>
+        <li>{{trabajadores[2].contratado}}</li>
+    </ul>
+</div>
