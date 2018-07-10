@@ -6,7 +6,7 @@ import { ftruncate } from 'fs';
     templateUrl: './fruta.component.html'
 })
 export class FrutaComponent {
-    public nombre_componente = 'Componente de fruta';
+    public titulo = 'Componente de fruta';
     public listado_frutas = 'Naranja, Manzana, Pera y Sandia';
 
     public nombre: string;
@@ -25,7 +25,7 @@ export class FrutaComponent {
     ngOnInit() {
         this.cambiarNombre();
         this.cambiarEdad(this.edad);
-        alert('Hola ' + this.nombre + ", tu edad es " + this.edad);
+        //alert('Hola ' + this.nombre + ", tu edad es " + this.edad);
 
         //VARIABLES Y ALCANCES
         var uno = 8;

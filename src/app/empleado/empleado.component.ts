@@ -10,16 +10,19 @@ export class EmpleadoComponent {
     public empleado: Empleado;
     public trabajadores: Array<Empleado>;
     public trabajadorExterno: boolean;
-
+    public color: string;
+    public colorSeleccionado: string;
 
     constructor() {
-        this.empleado = new Empleado('Diego', 28, 'Desarrollador', true);
+        this.empleado = new Empleado('Victor', 28, 'Desarrollador', true);
         this.trabajadores = [
-            new Empleado('Diego', 28, 'Desarrollador', true),
+            new Empleado('Ana', 25, 'Devops', false),
             new Empleado('Manuel', 20, 'UX', true),
             new Empleado('Sofia', 18, 'Arquitecto', false)
         ];
         this.trabajadorExterno = true;
+        this.color = 'green';
+        this.colorSeleccionado = '#ccc';
     }
 
     ngOnInit() {
@@ -29,7 +32,10 @@ export class EmpleadoComponent {
 
     cambiarExterno(valor) {
         this.trabajadorExterno = valor;
-        
+    }
+
+    logColorSeleccionado(){
+        console.log(this.colorSeleccionado);
     }
 
 }
