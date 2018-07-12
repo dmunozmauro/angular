@@ -1,4 +1,5 @@
-<h2>{{titulo}}</h2>
+<h1 style="color:blue">{{titulo}}</h1>
+<hr>
 <br>
 
 <input type="text" [(ngModel)]="prendaGuardar">
@@ -12,7 +13,20 @@
 <h3>Listado de prendas de ropa</h3>
 
 <ul>
-    <li *ngFor="let prenda of listadoRopa">{{prenda}}
-        <button (click)="eliminarPrenda()">Elimina la prenda</button>
+    <li *ngFor="let prenda of listadoRopa; let i= index">{{prenda}}
+        <button (click)="eliminarPrenda(i)">Elimina la prenda</button>
+    </li>
+</ul>
+<ul>
+    <li>
+        {{fecha | date:'dd/MM/yyyy'}}
+    </li>
+    <!--Ejemplo de PIPES-->
+    <li>
+        {{fecha | date:'fullDate' | uppercase | lowercase}}
+    </li>
+    <!--Ejemplo de PIPES Personalizada-->
+    <li>
+        {{5 | conversor:7}}
     </li>
 </ul>
