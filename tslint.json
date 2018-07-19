@@ -14,6 +14,7 @@
     "forin": true,
     "import-blacklist": [true, "rxjs"],
     "import-spacing": true,
+    "quotemark": [true, "single"],
     "indent": [
       true,
       "spaces"
